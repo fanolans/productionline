@@ -4,20 +4,21 @@
  */
 package productionline;
 import java.util.*;
-import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  *
- * @author Hubbystrife
+ * @author Hubby
  */
 public class EmployeeInfo {
     StringBuilder name;
     String code;
     
     public StringBuilder getName(){
+        setName();
         return name;
     }
     public String getCode(){
+        createEmployeeCode(name);
         return code;
     }
     private void setName(){
@@ -25,16 +26,17 @@ public class EmployeeInfo {
         sb.append(inputName());
         this.name = sb ;
     }
-    /*private void createEmployeeCode(StringBuilder name){
-        String fullName = name.toString();
-        String[] arrfullName = fullName.split("\s");
-        this.code = arrfullName[0].charAt(0) + arrfullName[1];
-    }*/
+    private void createEmployeeCode(StringBuilder name){
+        if (checkName(name) == true){
+            String fullName = name.toString();
+            String[] arrfullName = fullName.split("\s");
+            this.code = arrfullName[0].charAt(0) + arrfullName[1];
+        }  
+    }
     private String inputName(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your fullname : ");
         String fullName = sc.nextLine();
-        System.out.println(fullName);
         return fullName;
     }
     private boolean checkName(StringBuilder name){
