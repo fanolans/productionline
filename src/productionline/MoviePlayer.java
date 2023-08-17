@@ -8,44 +8,48 @@ package productionline;
  *
  * @author Clutz
  */
-
-//this class is a subclass of Product and uses the interface MultimediaControl
 public class MoviePlayer extends Product implements MultimediaControl {
-    
-    Screen screen;
-    MonitorType monitortype;
-    
-    MoviePlayer(String name, Screen screen, MonitorType monitortype){  
-      super(name);
-      this.screen = screen;
-      this.monitortype = monitortype;
+
+    private Screen screen;
+    private MonitorType monitorType;
+
+    public MoviePlayer(String name, Screen screen, MonitorType monitorType) {
+        super(name);
+        this.screen = screen;
+        this.monitorType = monitorType;
     }
 
     @Override
     public void play() {
-      System.out.println("Playing");
+        System.out.println("Playing");
     }
 
     @Override
     public void stop() {
-      System.out.println("Stopped");
+        System.out.println("Stopping");
     }
 
     @Override
     public void previous() {
-      System.out.println("Previous");
+        System.out.println("Previous");
     }
 
     @Override
     public void next() {
-      System.out.println("Next");
+        System.out.println("Next");
     }
 
     @Override
     public String toString() {
-      String str = super.toString() + "\n" +
-          "Screen: " + screen + "\n" +
-          "Monitor Type: " + monitortype;
-      return str;
+        return String.format(
+            super.toString(),
+            "Screen : %s\nMonitor Type : %s",
+            screen, monitorType
+        );
+    }
+        
+    @Override
+    public int compareTo(Product otherProduct) {
+        return super.compareTo(otherProduct);
     }
 }

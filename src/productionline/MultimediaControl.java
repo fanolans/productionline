@@ -6,9 +6,10 @@ package productionline;
 
 /**
  *
- * @author Nolan
+ * @author Clutz
  */
 public interface MultimediaControl {
+  
     public void play();
 
     public void stop();

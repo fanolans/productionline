@@ -3,15 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package productionline;
-
 import java.util.Date;
 
 /**
  *
- * @author Nolan
+ * @author Clutz
  */
 public interface Item {
-    public static final String MANUFACTURER = "OracleProduction";
+    public static final String manufacturer = "OracleProduction";
 
     public void setProductionNumber(int productionNumber);
 

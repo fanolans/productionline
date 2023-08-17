@@ -6,21 +6,23 @@ package productionline;
 
 /**
  *
- * @author Nolan
+ * @author Clutz
  */
 public enum ItemType {
-    Audio("AU"),
-    Visual("VI"),
-    AudioMobile("AM"),
-    VisualMobile("VM");
+    AU("Audio"),
+    VI("Visual"),
+    AM("AudioMobile"),
+    VM("VisualMobile");
 
     private final String code;
 
     ItemType(String code) {
-      this.code = code;
+        this.code = code;
     }
 
     public String getCode() {
-      return code;
+        return code;
     }
+
 }
+

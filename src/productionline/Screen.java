@@ -8,16 +8,18 @@ package productionline;
  *
  * @author Clutz
  */
-class Screen implements ScreenSpec {
-    String resolution;
-    int refreshrate;
-    int responsetime;
-    
-    Screen(String resolution, int refreshrate, int responsetime){  
-        this.resolution=resolution;  
-        this.refreshrate=refreshrate;  
-        this.responsetime=responsetime;  
-    }  
+public class Screen implements ScreenSpec {
+
+    private String resolution;
+    private int refreshRate;
+    private int responseTime;
+
+    public Screen(String resolution, int refreshRate, int responseTime) {
+        this.resolution = resolution;
+        this.refreshRate = refreshRate;
+        this.responseTime = responseTime;
+    }
+
     @Override
     public String getResolution() {
         return resolution;
@@ -25,18 +27,20 @@ class Screen implements ScreenSpec {
 
     @Override
     public int getRefreshRate() {
-        return refreshrate;
+        return refreshRate;
     }
 
     @Override
     public int getResponseTime() {
-        return responsetime;
+        return responseTime;
     }
-    
+
     @Override
-    public String toString(){
-      String output = "Resolution : "+resolution+"\nRefresh Rate : "+refreshrate+"\nResponse Time: "+responsetime;
-      return output;
+    public String toString() {
+        return String.format(
+            super.toString(),
+            "Resolution : %s\nRefresh Rate : %d\nResponse Time : %d",
+            resolution, refreshRate, responseTime
+        );
     }
-   
 }

@@ -11,9 +11,10 @@ package productionline;
 public class ScreenDriver {
 
     public static void main(String[] args) {
-        Screen testscreen = new Screen("600x400",40,22);
-        System.out.println(testscreen.toString());
-        
+        // Create a screen
+        Screen screen = new Screen("600x400", 40, 22);
+
+        // Print the details of the screen
+        System.out.println(screen);
     }
-    
 }

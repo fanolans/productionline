@@ -10,18 +10,24 @@ package productionline;
  */
 public class MoviePlayerDriver {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Screen testformovieplay = new Screen("600x400",40,22);
-        MoviePlayer testmovieplayer = new MoviePlayer("myMovieplayer",testformovieplay,MonitorType.LCD);
-            System.out.println(testmovieplayer.toString());
-            testmovieplayer.play();
-            testmovieplayer.previous();
-            testmovieplayer.next();
-            testmovieplayer.stop();
+        // Create a movie player
+        Screen screen = new Screen("1920x1080", 60, 10);
+        MoviePlayer moviePlayer = new MoviePlayer("My Movie Player", screen, MonitorType.LED);
+
+        // Play the movie player
+        moviePlayer.play();
+
+        // Stop the movie player
+        moviePlayer.stop();
+
+        // Go to the previous media item
+        moviePlayer.previous();
+
+        // Go to the next media item
+        moviePlayer.next();
+
+        // Print the details of the movie player
+        System.out.println(moviePlayer);
     }
-    
 }
