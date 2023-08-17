@@ -14,10 +14,10 @@ public class AudioPlayer extends Product implements MultimediaControl {
     protected ItemType mediaType;
 
     //Constructor that sets name and specification, defaults the mediaType.
-    public AudioPlayer(String name, String specification) {
+    public AudioPlayer(String name, String specification, ItemType itemtype) {
       super(name);
-      audioSpecification = specification;
-      mediaType = ItemType.Audio;
+      this.audioSpecification = specification;
+      this.mediaType = ItemType.Audio;
     }
 
     //Override Methods

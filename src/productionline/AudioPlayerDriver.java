@@ -10,7 +10,7 @@ package productionline;
  */
 public class AudioPlayerDriver {
     public static void main(String[] args) {
-    AudioPlayer player = new AudioPlayer("myAudioPlayer", "mySpec");
+    AudioPlayer player = new AudioPlayer("myAudioPlayer", "mySpec", ItemType.Audio);
     System.out.println("Created an audio player and calling methods...");
     System.out.println(player);
     player.play();
