@@ -3,12 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package productionline;
-import java.util.*;
 /**
  *
  * @author Hubby
  */
-public class EmployeeInfoDriver {
+public class TestProductionLine {
     public static void main(String[] args) {
         System.out.println("Hallo");
         EmployeeInfo Employee = new EmployeeInfo();
