@@ -5,6 +5,7 @@
 package productionline;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 
 /**
@@ -17,7 +18,7 @@ public class ViewFileInfo {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        Path p = Paths.get("C:\LineTests\TestResults.txt");
+        Path p = Paths.get("C:\\LineTests\\TestResults.txt");
         try (BufferedReader reader = Files.newBufferedReader(p, StandardCharsets.UTF_8)) {
             String line;
             while ((line = reader.readLine()) != null) {

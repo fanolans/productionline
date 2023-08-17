@@ -19,7 +19,7 @@ public class TestProductionLine {
         // Create an EmployeeInfo object
         EmployeeInfo employeeInfo = new EmployeeInfo();
 
-        // Create a list of products
+        /** Create a list of products
         ArrayList<Product> products = new ArrayList<>();
         products.add(new Product("My Audio Player", "Superior audio"));
         products.add(new Product("My Movie Player", new Screen("1920x1080", 60, 10), MonitorType.LED));
@@ -29,7 +29,7 @@ public class TestProductionLine {
         processFiles.WriteFile(products);
 
         // Write the employee information to file
-        processFiles.WriteFile(employeeInfo);
+        processFiles.WriteFile(employeeInfo);**/
     }
 }
 

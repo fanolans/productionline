@@ -20,7 +20,7 @@ public class ProcessFiles {
     private Path p3;
 
     public ProcessFiles() throws IOException {
-        p = Paths.get("C:\LineTests");
+        p = Paths.get("C:\\LineTests");
         p2 = Paths.get("TestResults.txt");
         p3 = p.resolve(p2);
         CreateDirectory();
