@@ -51,7 +51,6 @@ public class Product implements Item, Comparable<Item> {
       return serialNumber;
     }
 
-    //To String
     public String toString() {
       String output = "Manufacturer: " + manufacturer + "\n" +
           "Serial Number: " + serialNumber + "\n" +
